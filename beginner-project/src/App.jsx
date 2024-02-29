@@ -1,9 +1,11 @@
 import { useState } from 'react'
+
 import viteLogo from '/vite.svg'
 import reactLogo from "./assets/react.svg";
-import './App.css'
 import Nav from './components/Nav'
-
+import { UserProvider } from './components/UserContext';
+import { ThemeProvider } from './components/ThemeContext';
+import { useTheme } from "../ThemeContext";
 
 
 function HeaderApp() {
@@ -13,21 +15,32 @@ function HeaderApp() {
 }
  
 function App() {
-  const asideStyle = {
-  backgroundColor:"red",
-  color:"#fff"
-}
-  {/* const Logo = <img src={ reactLogo} alt="logo" />
-return Logo;*/}
+
+  const [greeting, setGreeting] = useState({
+    greet: "Hello, World",
+    count: 0
+
+  });
+
+  function updateGreeting() {
+    setGreeting((prevState) => {
+      return {
+        ...greeting,
+        greet: "Welcome",
+        count: greeting.count + 2
+      }
+    })
+  }
   return (
-    <div style={asideStyle}>
-      <Nav/>
-    <HeaderApp/>
-      {/* <Logo />*/}
-      
+    <>
+      {/*<HeaderApp/>*/}
+      <h1>{greeting.greet}</h1>
+      <p>{greeting.count}</p>
+      <button onClick={updateGreeting}>Greet</button>
+    </>
+  )
 
-      </div>
-    )  
+
+
 }
-
 export default App

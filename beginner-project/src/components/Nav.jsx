@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useUser } from './UserContext'
 const NavItem = (props) => {
   return (
      <ul>
@@ -11,11 +12,14 @@ const NavItem = (props) => {
 }
 function Nav() {
   const clickHandler = ()=> console.log("clicked")
+  const {user} = useUser()
   return (
    <nav className="main-nav">
            <NavItem first="Home" second="Articles"  third="Blog"  fourth="Contact"/>
       <button onClick={clickHandler}>Click Me!</button>
-        </nav>
+      <p>Hello { user.name}</p>    
+    
+    </nav>
   )
 }
 
