@@ -1,12 +1,17 @@
 import { useState } from 'react'
 
-import './App.css'
+import viteLogo from '/vite.svg'
+import reactLogo from "./assets/react.svg";
+import Nav from './components/Nav'
+
+
 
 function HeaderApp() {
   return (
     <h1>hello world</h1>
   )
 }
+ 
 function App() {
 
   const [greeting, setGreeting] = useState({
@@ -31,7 +36,8 @@ function App() {
       <p>{ greeting.count}</p>
       <button onClick={updateGreeting}>Greet</button> 
       </>
-    )  
+  )
+
 }
 
 export default App

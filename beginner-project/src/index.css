@@ -12,6 +12,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+ul{
+  list-style-type: none;
+  display: flex;
+  justify-contant: space-between ;
+  
+}
+ul>li{
+  padding: 1rem;
+
+}
 
 a {
   font-weight: 500;
