@@ -1,10 +1,14 @@
-import React from 'React'
+import React,{useState, useEffect} from 'React'
 
 function Toggle() {
     const [toggling, setToggle] = useState(false)
     const clickToggle = () => {
         setToggle(!toggling)
     }
+useEffect(()=>{
+  document.title = toggling ? "Hello" : " hi";
+}, [toggling])
+
   return (
     <div>
       <button onClick={clickToggle}>Toggle</button>
