@@ -13,7 +13,7 @@ function App() {
   
   return (
     <>
-      <Count />
+      {/* <Count /> */}
       <Toggle/>
 
    </>
