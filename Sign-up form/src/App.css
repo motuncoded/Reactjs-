@@ -1,0 +1,41 @@
+.container {
+  --max-width: 1110px;
+  --padding: 1rem;
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem;
+}
+.imageContainer {
+  min-height: 100vh;
+}
+
+.image {
+  width: 100%;
+  max-width: 600px;
+  min-height: 78vh;
+  border-radius: 2rem;
+  position: absolute;
+  top:10%;
+  left: 200px;
+  z-index: 2;
+}
+.formWrapper {
+}
+
+.formContainer {
+  background-color: #f7f7ff;
+  width: 600px;
+  position: absolute;
+  height: 78vh;
+    top:10%;
+z-index: 1;
+  right: 170px;
+
+  display: grid;
+  place-items: center;
+}
