@@ -4,38 +4,80 @@
   width: min(var(--max-width), 100% - (var(--padding) * 2));
   margin-inline: auto;
 }
+.grid {
+}
 
 .even-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: rem;
 }
 .imageContainer {
-  min-height: 100vh;
+  z-index: 2;
 }
 
 .image {
   width: 100%;
-  max-width: 600px;
-  min-height: 78vh;
-  border-radius: 2rem;
-  position: absolute;
-  top:10%;
-  left: 200px;
-  z-index: 2;
+  height: 550px;
+  border-radius: .8rem;
 }
 .formWrapper {
+  position: relative;
 }
 
 .formContainer {
   background-color: #f7f7ff;
-  width: 600px;
+  max-width: 500px;
+  width: 100%;
   position: absolute;
-  height: 78vh;
-    top:10%;
-z-index: 1;
-  right: 170px;
+  z-index: 1;
+  height: 550px;
+  right: 85px;
+  border-top-right-radius: .8rem;
+    border-bottom-right-radius: .8rem;
 
-  display: grid;
-  place-items: center;
+}
+.formContainer > h2 {
+  text-align: center;
+  padding-top: 2rem;
+}
+form > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 240px;
+  outline: none;
+  margin: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid gray;
+  background-color: transparent;
+}
+#checkbox {
+  display: flex;
+  flex-direction: row;
+}
+#checkbox > label {
+  font-size: .7rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.75rem;
+}
+button {
+  width: 240px;
+  outline: none;
+  padding: 0.5rem;
+
+  border-radius: 0.5rem;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
