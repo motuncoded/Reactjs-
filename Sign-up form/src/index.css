@@ -1,7 +1,8 @@
 :root{
 --primary-color:;
 --secondary-color:;
---bg-color:;
+--bg-color:#00365e;
+--secondary-bg:#fff;
 
 }
 *:before,*:after,*{
@@ -11,15 +12,9 @@
   
 }
 body{
-  background-color: #fff;
-  min-height: 100vh;
+  background-color: var(--bg-color);
   display:grid;
 place-items: center;
-}
-.container{
-  --max-width: 1110px;
-  --padding: 1rem;
-    width: min(var(--max-width), 100% - (var(--padding) * 2));
-  margin-inline: auto;
-
+min-height: 100vh;
+font-family: system-ui, sans-serif;
 }
