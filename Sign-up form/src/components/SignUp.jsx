@@ -1,5 +1,8 @@
 import React from "react";
-import { FaArrowRight } from "react-icons/fa6";
+import { BsArrowRightShort } from "react-icons/bs";
+
+import { FcGoogle } from "react-icons/fc";
+import { PiAppleLogoThin } from "react-icons/pi";
 
 import image from "../assets/background.jpg";
 
@@ -31,11 +34,32 @@ function SignUp() {
                 <label htmlFor="terms">Accept Terms and Conditions</label>
               </div>
             </div>
-
-            <div>
-              <button>
+            <div style={{ margin: "-1rem 0rem" }}>
+              <button style={{ backgroundColor: "#000", color: "#fff" }}>
                 Join Us{" "}
-                <FaArrowRight size={12} style={{ paddingLeft: ".25rem" }} />
+                <BsArrowRightShort size={22} style={{ marginLeft: ".25rem" }} />
+              </button>
+            </div>
+            <div id="divide"></div>
+            <div style={{ marginTop: "-2rem" }}>
+              <button
+                style={{
+                  marginBottom: ".15rem",
+                  backgroundColor: "transparent",
+                }}
+              >
+                <FcGoogle size={22} style={{ paddingRight: ".3rem" }} /> Sign up
+                with Google
+              </button>
+              <button
+                style={{
+                  marginTop: ".15rem",
+                  backgroundColor: "#000",
+                  color: "#fff",
+                }}
+              >
+                <PiAppleLogoThin size={22} style={{ paddingRight: ".3rem" }} />
+                Sign up with Apple
               </button>
             </div>
           </form>
