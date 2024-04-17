@@ -1,104 +1,115 @@
 .grid{
+  display: grid;
+  place-items: center;
+}
+.grid-col{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2rem;
+}
+.link{
+  color: #02020A;
+  text-decoration: none;
+  &:hover{
+  color: blue;
+border-bottom:2px solid blue;
+  }}
+
+  /* screen 1 */
+/* .formContainer{
 display:grid;
 place-items: center;
-margin:1rem 0;
-
+  background: linear-gradient(96deg, #B497D6  50%, #E1E2EF calc(50% + 1px));
+min-height: 100vh;
 
 }
-
-
-.link{
-  background-color: #3f00ff;
-  font-size: 1rem;
-  margin:1rem 0;
+#form{
+  width: 400px;
   padding: 1rem;
-border-radius: .5rem;
-
-}
-
-
-.screen {
-  display: grid;
-  grid-template-columns: auto auto;
-  place-items: center;
-  background: linear-gradient(96deg, #3f00ff 40%, #fafafa calc(40% + 1px));
-  min-height: 100vh;
-  width: 100%;
-}
-.image {
-}
-.image > h2,
-a {
-  color: #ffff;
-  font-size: 1.6rem;
-  text-decoration: none;
-}
-
-.screenForm {
-  background-color: #fafafa;
-  color: gray;
-  width: 500px;
-  display: grid;
-  place-items: center;
-}
-h1 {
-  font-weight: 500;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  color: #0a0a0a;
-}
-h2,
-h3 {
-  font-weight: 200;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  width: 300px;
-  text-align: center;
-}
-.formInput {
+  border-radius: .5rem;
   display: flex;
   flex-direction: column;
-  width: 300px;
-  margin-bottom: 0.75rem;
-}
-.formInput > input {
-  margin: 0.25rem 0;
-  padding: 0.5rem;
-  border: 1px solid gray;
-  outline: none;
-  border-radius: 0.25rem;
-}
-.sign {
-  background-color: #3f00ff;
-  color: #fafafa;
-  border: 2px solid white;
-  outline: none;
-  margin-top: 0.5rem;
-  padding: 0.55rem;
-  border-radius: 0.25rem;
-}
-h3 {
-  margin: 1rem 0;
-}
-.icon{
-outline: none;
-margin-top: 0.5rem;
-display:grid;
-place-items: center;
-
-
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
 
 }
-.icon>button{
-  border: 2px solid white;
+.formWrapper{
+display: flex;
+flex-direction: column;
+margin: .75rem 0;
+background-color: transparent;
+border-bottom: 2px solid #000;
+width: 275px;
+
+}
+.formWrapper>label{
+margin: .5rem 0;
+
+}
+input{
+  border: none;
+  outline:none;
   background-color: transparent;
 
+}
+.inputContainer{
+display: flex;
+justify-content: space-between;
 
 }
-@media screen and(max-width: 400px){
-  .screen{
-    background: transparent;
-
-  }
+button{
+  background-color: transparent;
+  border:none;
+  outline:none;
 }
+.btn{
+  margin-top: 1rem;
+  padding: .5rem;
+   box-shadow:0px 1px 5px #02020A
+}
+ */
+
+ /* Screen 2 */
+ .screenTwo{
+    background: linear-gradient(90deg, #7CEA9C  40%, #fff calc(40% + 1px));
+min-height: 100vh;
+display: grid;
+place-items: center;
+
+ }
+ .screenContainer{
+ 
+  width: calc(900px - 1rem);
+  height: 500px;
+  position: absolute;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+ }
+ .screenWrapper{
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+ }
+ .formIntro{
+width: auto;
+padding: .5rem;
+
+ }
+ .formIntro>h1{
+font-size: 1.2rem;
+font-weight:500;
+ }
+ .formIntro>h2{
+font-size: .95rem;
+font-weight:300;
+ }
+ @media screen and (max-width:768px) {
+.screenContainer{
+    width: calc(400px - 1rem);
+    height: 400px;
+}
+ }

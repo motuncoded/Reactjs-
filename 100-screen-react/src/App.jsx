@@ -1,35 +1,30 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import SignIn from "./routes/SignIn.jsx";
-import SignUp from "./routes/SignUp.jsx";
-import Dashboard from "./routes/Dashboard.jsx";
-import Home from "./routes/Home.jsx";
-import AuthContext from "./context/AuthContext.jsx";
-import ProtectedRoutes from "./routes/ProtectedRoutes.jsx";
+
+import Home from "./pages/Home.jsx";
+import Screen1 from "./Screens/Screen1.jsx";
+import Screen2 from "./Screens/Screen2.jsx";
+
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <ProtectedRoutes><Home/></ProtectedRoutes>,
+      element: <Home />,
     },
     {
-      path: "/signin",
-      element: <SignIn />,
+      path: "/screen1",
+      element: <Screen1 />,
     },
     {
-      path: "/signup",
-      element: <SignUp />,
-    },
-    {
-      path: "/dashboard",
-      element: <Dashboard />,
+      path: "/screen2",
+      element: <Screen2 />,
     },
   ]);
   return (
-    <AuthContext>
+    <>
       <RouterProvider router={router} />
-    </AuthContext>
+    </>
   );
 }
 
